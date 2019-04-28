@@ -1,0 +1,32 @@
+.btn {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: rgb(108, 117, 125);
+  padding: .375rem .75rem;
+  margin: 0 0.2rem;
+  border-radius: .25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 0.7rem;
+  transition-duration: .4s;
+ }
+ 
+ .btn-outline {
+  background: #fff;
+  color: #6c757d;
+  border-color: #6c757d;
+ }
+ 
+ .btn-outline:hover {
+  background: rgb(108, 117, 125);
+  color: #fff;
+ }
+ 
+ .btn-outline:focus {
+ /* get rid of blue outline when clicked*/
+    outline:0;
+ /* give it an optional outline */
+ /* box-shadow: 0 0 0 .2rem rgba(108,117,125,.5); */
+ }
+ 
+ 
