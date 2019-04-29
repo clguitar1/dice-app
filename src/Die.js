@@ -3,10 +3,10 @@ import './Die.css';
 
 class Die extends Component {
   render() {
-    const { diceClass1, diceClass2 } = this.props;
+    const { animateDiceClass, diceClass1, diceClass2 } = this.props;
 
     return (
-      <div className="Die-container">
+      <div className={animateDiceClass}>
         <i className={diceClass1}></i>
         <i className={diceClass2}></i>
       </div>
