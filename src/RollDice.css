@@ -10,6 +10,14 @@
   margin-left: 0.7rem;
   transition-duration: .4s;
  }
+
+ .btn:disabled {
+   background-color: #6c757d;
+   border-color: #6c757d;
+   color: white;
+   opacity: .65;
+   pointer-events: none;
+ }
  
  .btn-outline {
   background: #fff;

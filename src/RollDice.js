@@ -6,7 +6,9 @@ class RollDice extends Component {
   state = {
     class1: 'fas fa-dice-three',
     class2: 'fas fa-dice-two',
-    animateDiceClass: ''
+    animateDiceClass: '',
+    buttonText: 'Roll Dice',
+    disableButton: false
   }
 
   roll = () => {
@@ -15,11 +17,13 @@ class RollDice extends Component {
     this.setState({
       class1: this.props.sides[dice1RandomSideIndex].class,
       class2: this.props.sides[dice2RandomSideIndex].class,
-      animateDiceClass: 'shake'
+      animateDiceClass: 'shake',
+      buttonText: 'Rolling...',
+      disableButton: true
     });
 
     setTimeout(() => {
-      this.setState({ animateDiceClass: '' })
+      this.setState({ animateDiceClass: '', buttonText: 'Roll Dice', disableButton: false })
     }, 1000);
   }
   render() {
@@ -30,7 +34,7 @@ class RollDice extends Component {
           diceClass2={this.state.class2}
           animateDiceClass={this.state.animateDiceClass}
         />
-        <button className="btn btn-outline" onClick={this.roll}>Roll Dice</button>
+        <button disabled={this.state.disableButton} className="btn btn-outline" onClick={this.roll}>{this.state.buttonText}</button>
       </div>
     )
   }
